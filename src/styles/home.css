@@ -1,0 +1,138 @@
+/* =========================
+   ROOT CONTAINER
+   ========================= */
+.homeContainer {
+  background-color: #0a0a0a;
+  /* slightly lighter than card */
+  min-height: 100vh;
+}
+
+.mainFeed {
+  background-color: #0a0a0a;
+}
+
+
+/* =========================
+   TOP NAVBAR
+   ========================= */
+.topNavbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1300;
+  background: #020617;
+  border-bottom: 1px solid #1F2933;
+}
+
+/* =========================
+   LEFT SIDEBAR
+   ========================= */
+.leftSidebar {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  width: 290px;
+  height: calc(100vh - 64px);
+  background-color: #020617;
+  border-right: 1px solid #1F2933;
+  overflow: hidden;
+  z-index: 1200;
+}
+
+/* =========================
+   MAIN FEED
+   ========================= */
+.mainFeed {
+  position: fixed;
+  top: 64px;
+  left: 290px;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #0B0F1A;
+  padding: 28px 36px;
+}
+
+
+/* Feed wrapper */
+.feedWrapper {
+  max-width: 860px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* =========================
+   LOADING
+   ========================= */
+.loadingPosts {
+  background: #0f172a;
+  border: 1px solid #1F2933;
+  border-radius: 12px;
+  padding: 80px 24px;
+  text-align: center;
+  color: #818384;
+  font-size: 16px;
+}
+
+/* =========================
+   COMMUNITY / USER ITEMS
+   ========================= */
+.communityItem,
+.userItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+
+.communityItem:hover,
+.userItem:hover {
+  background: rgba(37, 99, 235, 0.12);
+}
+
+/* Community icon */
+.communityIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #2563EB, #38BDF8);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+/* User icon */
+.userIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563EB, #1D4ED8);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+/* Names */
+.communityName,
+.userName {
+  font-weight: 600;
+  color: #E5E7EB;
+}
+
+/* Subtext */
+.communityMembers,
+.userKarma {
+  font-size: 13px;
+  color: #9CA3AF;
+}

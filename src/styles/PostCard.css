@@ -1,0 +1,419 @@
+/* ===============================
+   POST CARD BASE
+================================ */
+.post-card {
+  background: #0b0f17 !important;
+  border-radius: 20px;
+  border: 1px solid rgba(29, 155, 240, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  color: #e5e7eb;
+}
+
+.post-card:hover {
+  border-color: rgba(29, 155, 240, 0.6);
+  box-shadow:
+    0 0 0 1px rgba(29, 155, 240, 0.2),
+    0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* ===============================
+   HEADER FIXES
+================================ */
+.post-card .MuiCardHeader-root {
+  background: transparent;
+}
+
+.post-card .MuiCardHeader-title {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.post-card .MuiCardHeader-subheader {
+  color: #9ca3af !important;
+}
+
+/* community + meta row (NEW) */
+.post-subheader {
+  display: flex;
+  flex-direction: column;
+}
+.post-community {
+  color: #9ca3af;
+  font-size: 13px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+/* Underline animation for clickable community names */
+.post-community {
+  position: relative;
+  text-decoration: none;
+}
+.post-community::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -2px;
+  height: 2px;
+  background: #1d9bf0;
+  transition: right 220ms cubic-bezier(.2,.8,.2,1);
+  border-radius: 2px;
+}
+.post-community:hover::after,
+.post-community:focus::after {
+  right: 0;
+}
+.post-community:active::after {
+  background: #1476d6;
+}
+.post-meta {
+  color: #6b7280;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+/* ===============================
+   TITLE
+================================ */
+.post-title-area {
+  padding: 12px 16px 10px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.015),
+    transparent
+  );
+  margin-bottom: 8px;
+}
+
+.post-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #ffffff !important;
+  letter-spacing: -0.2px;
+}
+
+/* subtle divider under title (NEW) */
+.post-title-area::after {
+  content: "";
+  display: block;
+  height: 1px;
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* ===============================
+   DESCRIPTION
+================================ */
+.post-card .MuiCardContent-root {
+  background: transparent !important;
+}
+
+.post-description {
+  color: #d1d5db !important;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  white-space: pre-wrap;
+  margin: 8px 16px 14px 16px;
+}
+
+/* ===============================
+   IMAGE SLIDER (NEW)
+================================ */
+.image-slider {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  margin-top: 12px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #000;
+  z-index: 1;
+}
+
+.post-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+
+/* arrows */
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 50;
+
+  width: 44px;
+  height: 44px;
+  padding: 0 !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff !important;
+  background: rgba(0, 0, 0, 0.65) !important;
+  backdrop-filter: blur(6px);
+  border-radius: 50%;
+}
+
+.prev-btn {
+  left: 12px;
+}
+
+.next-btn {
+  right: 12px;
+}
+
+/* ===============================
+   ACTION BAR
+================================ */
+.MuiCardActions-root {
+  background: #0b0f17 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  z-index: 5;
+}
+
+/* ===============================
+   AI SUMMARY
+================================ */
+.ai-summary-box {
+  background: rgba(29, 155, 240, 0.08);
+  border-left: 3px solid #1d9bf0;
+  border-radius: 10px;
+  margin-top: 12px;
+  padding: 10px 14px;
+}
+
+.ai-summary-text {
+  font-size: 14px;
+  color: #e5e7eb !important;
+  line-height: 1.6;
+}
+
+/* ===============================
+   AI BUTTON
+================================ */
+.post-card button.MuiButton-outlined {
+  border-color: rgba(29, 155, 240, 0.4) !important;
+  color: #e5e7eb !important;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.post-card button.MuiButton-outlined:hover {
+  background: rgba(29, 155, 240, 0.15) !important;
+  border-color: #1d9bf0 !important;
+}
+
+/* ===============================
+   POLL (NEW)
+================================ */
+.poll-cardcontent {
+  padding: 8px 16px 12px 16px;
+}
+
+.poll-container {
+  width: 100%;
+  background: transparent;
+}
+
+.poll-question {
+  color: #e6edf3;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.poll-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.poll-option-btn {
+  width: 100%;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.02);
+  color: #dbeafe;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.poll-option-btn:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.poll-option-btn.selected {
+  background: rgba(29, 155, 240, 0.15);
+  border-color: rgba(29, 155, 240, 0.6);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.poll-option-btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.poll-vote-count {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ===============================
+   HIDDEN POST
+================================ */
+.hidden-post {
+  padding: 24px;
+  background: #020617;
+  border-radius: 14px;
+  color: #9ca3af;
+  text-align: center;
+}
+
+/* ===============================
+   DELETE TOAST
+================================ */
+.delete-toast {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 20;
+
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.5);
+  color: #fecaca;
+
+  padding: 8px 14px;
+  border-radius: 999px;
+
+  font-weight: 700;
+  font-size: 14px;
+
+  animation: toastFade 3s ease forwards;
+}
+
+@keyframes toastFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.95);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.95);
+  }
+}
+
+/* ===============================
+   HIGHLIGHTED POST (NEW)
+================================ */
+.highlighted-post {
+  box-shadow:
+    0 0 0 4px rgba(29, 155, 240, 0.08),
+    0 12px 30px rgba(29, 155, 240, 0.05);
+  border-color: rgba(29, 155, 240, 0.5) !important;
+}
+
+/* ===============================
+   IMAGES SECTION
+================================ */
+.images-section {
+  padding: 12px !important;
+  background: transparent;
+}
+
+.images-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1000px, 1fr));
+  gap: 12px;
+  width: 100%;
+}
+
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #0f172a;
+  border: 1px solid #2d3748;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  max-height: 420px;
+  max-width: 100%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.post-image:hover {
+  transform: scale(1.05);
+}
+
+/* Single image - full width */
+.images-grid:has(.image-wrapper:only-child) {
+  grid-template-columns: 1fr;
+}
+
+/* Two images */
+.images-grid:has(.image-wrapper:nth-child(2):last-child) {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Three or more images */
+.images-grid:has(.image-wrapper:nth-child(3)) {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 768px) {
+  .images-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
+.image-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 20;
+}
+
+.image-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+.image-dots .dot.active {
+  background: #1d9bf0;
+}

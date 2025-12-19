@@ -1,0 +1,111 @@
+/* Background */
+.login-bg {
+  position: fixed;
+  inset: 0;
+  background-color: #020617;
+  z-index: -1;
+}
+
+/* Wrapper */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 16px;
+}
+
+/* Card */
+.login-container {
+  width: 100%;
+  max-width: 480px;
+  background-color: #0f172a;
+  border-radius: 16px;
+  border: 1px solid #1F2933;
+  padding: 40px 32px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Title & Subtitle */
+.login-title {
+  color: #EDEFF1;
+  font-weight: 700;
+  text-align: center;
+  font-size: 28px;
+}
+
+.login-subtitle {
+  color: #818384;
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+/* Error */
+.login-error {
+  color: #ff4444;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* Inputs */
+.login-input {
+  margin-bottom: 16px;
+}
+
+.login-input .MuiOutlinedInput-root {
+  border-radius: 12px;
+  background-color: #0b0f1a;
+  color: #fff;
+}
+
+.login-input .MuiOutlinedInput-input {
+  padding: 14px 16px;
+}
+
+.login-input label {
+  color: #818384 !important;
+}
+
+.login-input .MuiOutlinedInput-notchedOutline {
+  border-color: #1F2933;
+}
+
+/* Button */
+.login-button {
+  background-color: #4c6ef5;
+  border-radius: 999px;
+  padding: 14px 0;
+  font-weight: 600;
+  text-transform: none;
+  box-shadow: 0 8px 20px rgba(76, 110, 245, 0.4);
+  transition: all 0.2s;
+  margin-top: 8px;
+}
+
+.login-button:hover {
+  background-color: #3b5bdb;
+  transform: translateY(-2px);
+}
+
+/* Signup Link */
+.login-signup {
+  text-align: center;
+  margin-top: 24px;
+  color: #818384;
+  font-size: 14px;
+}
+
+.signup-link {
+  color: #4c6ef5;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}

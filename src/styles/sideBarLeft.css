@@ -1,0 +1,130 @@
+/* Sidebar container */
+.sidebar {
+  flex-shrink: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: width 0.3s ease;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #020617;
+  padding: 10px;
+  border-right: 1px solid #1F2933;
+}
+
+.sidebar.open {
+  width: 260px;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+  padding: 10px 5px;
+}
+
+/* Sidebar header/title */
+.sidebar-title {
+  margin: 0 0 20px 0;
+  color: #4c6ef5;
+}
+
+.sidebar-subtitle {
+  color: #4c6ef5;
+  margin: 10px 0;
+}
+
+/* Navigation list */
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav li {
+  margin-bottom: 6px;
+}
+
+
+.sidebar-nav-item {
+  cursor: pointer;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: #0f172a;
+  border: 1px solid #1F2933;
+  color: #d7dadc;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-nav-item:hover {
+  background: #1e293b;
+}
+
+.sidebar-badge {
+  background: #ff4d4d;
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 12px;
+  margin-left: 8px;
+}
+
+/* Buttons */
+.sidebar-button-container {
+  margin-top: 30px;
+}
+
+.sidebar-button {
+  width: 100%;
+  padding: 10px;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.create-post {
+  background: #4c6ef5;
+}
+
+.create-post:hover {
+  background: #3b5bdb;
+  transform: translateY(-2px);
+}
+
+.start-community {
+  background: #4c6ef5;
+}
+
+.start-community:hover {
+  background: #3b5bdb;
+  transform: translateY(-2px);
+}
+
+.about-bluedit {
+  background: #1e293b;
+  border: 1px solid #3b4557;
+  color: #d7dadc;
+}
+
+.about-bluedit:hover {
+  background: #2d3a4a;
+}
+
+/* Collapsed sidebar */
+.sidebar-collapsed {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.sidebar-collapsed-item {
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+}

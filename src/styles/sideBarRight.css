@@ -1,0 +1,245 @@
+/* =========================
+   SIDEBAR CONTAINER
+========================= */
+.sidebar-right {
+  width: 320px;
+  background: #020617;
+  border-radius: 12px;
+  border-right: 1px solid #1F2933;
+  font-family: "Inter", system-ui, sans-serif;
+  color: #d7dadc;
+  overflow: hidden;
+  position: sticky;
+  top: 64px;
+}
+
+/* =========================
+   COMMUNITY INFO
+========================= */
+.subreddit-info {
+  padding: 16px;
+  border-bottom: 1px solid #1F2933;
+}
+
+.subreddit-info h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.subreddit-info p {
+  font-size: 14px;
+  color: #b1b1b1;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.subreddit-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #818384;
+  margin-bottom: 6px;
+}
+
+.subreddit-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.stat-number {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #818384;
+}
+
+/* =========================
+   RULES
+========================= */
+.rules-section {
+  padding: 16px;
+  border-bottom: 1px solid #1F2933;
+}
+
+.rules-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #818384;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.rule-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #1F2933;
+  cursor: pointer;
+}
+
+.rule-item:last-child {
+  border-bottom: none;
+}
+
+.rule-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.arrow {
+  font-size: 12px;
+  color: #818384;
+}
+
+/* =========================
+   ADMIN INFO
+========================= */
+.admin-info {
+  padding: 16px;
+  border-bottom: 1px solid #343536;
+  font-size: 14px;
+}
+
+.admin-info strong {
+  color: #ffffff;
+}
+
+/* =========================
+   MODERATORS
+========================= */
+.moderator-list {
+  padding: 16px;
+}
+
+.moderator-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #818384;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* Moderator row */
+.mod-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  font-size: 14px;
+}
+
+/* =========================
+   MOD ACTION BUTTONS
+========================= */
+.mod-action {
+  background: #0079d3;
+  border: none;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.mod-action:hover {
+  background: #1484d6;
+}
+
+.mod-action:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Danger (Demote) */
+.mod-action.danger {
+  background: transparent;
+  border: 1px solid #ef4444;
+  color: #ef4444;
+}
+
+.mod-action.danger:hover {
+  background: rgba(239, 68, 68, 0.15);
+}
+
+/* =========================
+   ADD MODERATOR BUTTON
+========================= */
+.message-mods-btn {
+  margin-top: 12px;
+  width: 100%;
+  background: #0079d3;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.message-mods-btn:hover {
+  background: #1484d6;
+}
+
+/* =========================
+   MODERATOR PICKER
+========================= */
+.mod-picker {
+  margin-top: 12px;
+  background: #0b0f1a;
+  border: 1px solid #343536;
+  border-radius: 10px;
+  overflow: hidden;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+/* Member row */
+.mod-pick-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #d7dadc;
+  transition: background 0.15s ease;
+}
+
+.mod-pick-item:hover {
+  background: rgba(0, 121, 211, 0.12);
+}
+
+.mod-picker .empty {
+  padding: 12px;
+  font-size: 13px;
+  color: #818384;
+  text-align: center;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+.mod-picker::-webkit-scrollbar {
+  width: 6px;
+}
+
+.mod-picker::-webkit-scrollbar-thumb {
+  background: #343536;
+  border-radius: 4px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .sidebar-right {
+    display: none;
+  }
+}
