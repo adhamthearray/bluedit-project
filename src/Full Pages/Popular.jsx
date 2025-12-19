@@ -6,7 +6,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../styles/home.css";
 
-const POPULARITY_THRESHOLD = 4;
+const POPULARITY_THRESHOLD = 3;
 
 function Popular({ onOpenCreateCommunity, onOpenCreatePost }) {
   const [posts, setPosts] = useState([]);
