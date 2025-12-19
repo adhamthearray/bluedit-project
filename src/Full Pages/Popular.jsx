@@ -6,7 +6,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../styles/home.css";
 
-const POPULARITY_THRESHOLD = 3;
+const POPULARITY_THRESHOLD = 1;
 
 function Popular({ onOpenCreateCommunity, onOpenCreatePost }) {
   const [posts, setPosts] = useState([]);
@@ -208,6 +208,7 @@ function Popular({ onOpenCreateCommunity, onOpenCreatePost }) {
     edited={post.edited || false}
     onVote={handleVote}
     currentUser={currentUser}
+    poll={post.poll}
   />
 ))
 
