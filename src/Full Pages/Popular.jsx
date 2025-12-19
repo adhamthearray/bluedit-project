@@ -6,7 +6,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../styles/home.css";
 
-const POPULARITY_THRESHOLD = 1;
+const POPULARITY_THRESHOLD = 5;
 
 function Popular({ onOpenCreateCommunity, onOpenCreatePost }) {
   const [posts, setPosts] = useState([]);
@@ -62,8 +62,8 @@ function Popular({ onOpenCreateCommunity, onOpenCreatePost }) {
         const allPosts = [...joinedPostsArrays.flat(), ...publicPostsArrays.flat()];
 
         // Apply popularity threshold
-        const popularPosts = allPosts.filter(
-          p => ((p.upvoteCount || 0) + (p.commentCount || 0)) >= POPULARITY_THRESHOLD
+        const popularPosts = mergedPosts.filter(
+          p => ((p.upvoteCount || 0) + (p.downvoteCount || 0) + (p.commentCount || 0)) >= POPULARITY_THRESHOLD
         );
 
         popularPosts.sort(
