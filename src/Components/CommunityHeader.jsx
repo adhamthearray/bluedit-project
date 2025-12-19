@@ -44,6 +44,7 @@ export default function CommunityHeader({
         {},
         { withCredentials: true }
       );
+       navigate(`/Community/${communityId}`);
       
     } catch {
       alert("Failed to join community");
@@ -58,7 +59,7 @@ export default function CommunityHeader({
         {},
         { withCredentials: true }
       );
-      navigate("/Home");
+      navigate(`/Community/${communityId}`);
     } catch {
       alert("Failed to leave community");
     }
