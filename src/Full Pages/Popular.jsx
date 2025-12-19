@@ -62,8 +62,8 @@ function Popular({ onOpenCreateCommunity, onOpenCreatePost }) {
         const allPosts = [...joinedPostsArrays.flat(), ...publicPostsArrays.flat()];
 
         // Apply popularity threshold
-        const popularPosts = mergedPosts.filter(
-          p => ((p.upvoteCount || 0) + (p.downvoteCount || 0) + (p.commentCount || 0)) >= POPULARITY_THRESHOLD
+        const popularPosts = allPosts.filter(
+          p => ((p.upvoteCount || 0) + (p.commentCount || 0)) >= POPULARITY_THRESHOLD
         );
 
         popularPosts.sort(
