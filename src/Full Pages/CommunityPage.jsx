@@ -270,7 +270,7 @@ const showToast = (message) => {
                   comments={post.comments || []}
                   upvoteCount={post.upvoteCount || 0}
                   downvoteCount={post.downvoteCount || 0}
-                  date={post.createdAt}
+                  
                   community_name={`b/${community.commName}`}
                   communityId={community._id}
                   edited={post.edited || false}
@@ -278,6 +278,7 @@ const showToast = (message) => {
                   currentUser={currentUser}
                   onDelete={handleDeletePost}
                   canDelete={canDeletePosts}
+                  date={post.date}
                 />
               ))
             )}
